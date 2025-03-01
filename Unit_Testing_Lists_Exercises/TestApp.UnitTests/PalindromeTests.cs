@@ -10,12 +10,14 @@ public class PalindromeTests
     [Test]
     public void Test_IsPalindrome_ValidPalindrome_ReturnsTrue()
     {
-        // Arrange
+        List<string> input = new() {"mom", "bob"};
+        bool expected = true;
 
         // Act
+        bool actual = Palindrome.IsPalindrome(input);
 
         // Assert
-        //Assert.IsTrue(result);
+        Assert.IsTrue(actual);
     }
 
     // TODO: finish test
@@ -23,28 +25,51 @@ public class PalindromeTests
     public void Test_IsPalindrome_EmptyList_ReturnsTrue()
     {
         // Arrange
-        List<string> words = new();
+        List<string> input = new();
 
         // Act
+        bool actual = Palindrome.IsPalindrome(input);
 
         // Assert
+        Assert.IsTrue(actual);
     }
 
     [Test]
     public void Test_IsPalindrome_SingleWord_ReturnsTrue()
     {
-        // TODO: finish test
+        // Arrange
+        List<string> input = new() { "hhthh"};
+
+        // Act
+        bool actual = Palindrome.IsPalindrome(input);
+
+        // Assert
+        Assert.IsTrue(actual);
     }
 
     [Test]
     public void Test_IsPalindrome_NonPalindrome_ReturnsFalse()
     {
-        // TODO: finish test
+        // Arrange
+        List<string> input = new() { "hello", "ava", "boib" };
+
+        // Act
+        bool actual = Palindrome.IsPalindrome(input);
+
+        // Assert
+        Assert.IsFalse(actual);
     }
 
     [Test]
     public void Test_IsPalindrome_MixedCasePalindrome_ReturnsTrue()
     {
-        // TODO: finish test
+        // Arrange
+        List<string> input = new() { "AAbAa", "Cvc", "boB" };
+
+        // Act
+        bool actual = Palindrome.IsPalindrome(input);
+
+        // Assert
+        Assert.IsTrue(actual);
     }
 }

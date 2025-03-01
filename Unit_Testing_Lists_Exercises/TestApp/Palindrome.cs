@@ -5,7 +5,7 @@ namespace TestApp;
 
 public class Palindrome
 {
-    public static bool IsPalindrome(List<string> words)
+    public static bool IsPalindrome(List<string> words)  // 121 112211 
     {
         return words
             .Select(s => s.ToLower())
